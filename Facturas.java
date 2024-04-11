@@ -44,7 +44,8 @@ public class Facturas {
         return importe;
     }
     public String toString(){
-        return "Factura nº: "+getNumero()+", Fecha: "+getFecha()+", Importe: "+getImporte();
+        String fecha =  String.format("%td-%<tb-%<tY",getFecha());
+        return "Factura nº: "+getNumero()+", Fecha: "+fecha+", Importe: "+getImporte();
     }
 }
 
